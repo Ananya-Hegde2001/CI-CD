@@ -2,6 +2,8 @@
   "name": "ci-cd-demo",
   "version": "1.0.0",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "lint": "node --check app.js test.js",
+    "build": "echo 'Build step: bundling application...' && node -e \"require('./app'); console.log('Build OK');\""
   }
 }
